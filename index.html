@@ -1,31 +1,177 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fase 2</title>
+    <style>
+        
+        body{text-align: center; }
+        header{background-color: bisque;}
+        nav{background-color: whitesmoke;
+        text-align: left;}
+        p{text-align: justify;}
+        li{text-align: left;}
+        
+
+    </style>
 </head>
-<style>
-    * {
-        text-align: center;
-        background-color: blueviolet;
-        color:white;
-    }
-</style>
 
 <body>
-    <h1> Bienvenido a mi sitio web</h1>
-    <h2> Proyecto de sitio web 2023 - 16-01</h2>
+
     <hr>
-    <h3> Nombre: Carlos Armando Sanchez Gebauer</h3>
-    <h3> Programa: Tecnologia en Producción de Audio</h3>
-    <h3> Fecha de creacion: martes 14 de febrero</h3>
+    <header>
+        <h1>Selectores CSS</h1>
+
+    </header>
     <hr>
-    <p> Mis datos de contacto son: <br>
-        skype: live:gebauer_carlos <br>
-        telefono: 3023792198 <br>
-        email: gebauer_carlos@outlook.com <br>
-    </p>
+    <nav>
+        <ul>
+            <li> <a href="#seccion1"> INICIO </a> </li>
+            <li> <a href="#seccion2"> SELECTORES CSS </a></li>
+            <li> <a href="#seccion3"> MOCKUP </a></li>
+            <li> <a href="#seccion4"> ACERCA DE </a></li>
+        </ul>
+
+    </nav>
+    <a name="seccion1"></a>
+    <section>
+        <h1>
+            INICIO
+        </h1>
+        <br>
+        <p>HTML es el lenguaje que emplean los navegadores para visualizar las páginas web. Para excribir en HTML escribiremos el propio texto que aparecerá en la página acompañado de una serie de instrucciones sobre cómo queremos que aparezca el texto. <br>
+
+            En las páginas, no todos los textos son iguales, ya que hay títulos, subtítulos, párrafos, enlaces... el texto puede además tomar distintos formatos. Hay también imágenes, fondos de distintos colores, etc. Todo esto debe indicarse junto con el texto de la página en HTML.</p>
+        <br><br>
+    </section>
+    <a name="seccion2"></a>
+    <section>
+        <P>
+        <h1>FUNDAMENTOS DE CSS</h1> <br>
+
+        <p>CSS (Cascading style sheets u hojas de estilo en cascada) es un lenguaje de programación muy parecido a HTML
+            que permite aplicar a los distintos elementos de la paginas web, de modo que los títulos, listas y párrafos
+            puedan verse igual en todas y cada una de las páginas.
+
+        <P>cada estilo CSS se compone de 3 partes: selector, una propiedad y un valor y su sintaxis es:</P>
+        <P>selector {propiedad:valor;}</P>
+        <LI>Selector: indica a que etiqueta HTML se aplicara el estilo.</LI>
+        <LI>Propiedad: indica a que propiedad de la etiqueta se aplicara el estilo, por ejemplo al color de fondo, al
+            tamaño de la letra, etc.</LI>
+        <LI>Valor: valor de la propiedad.</LI>
+
+        <P>Por ejemplo, el estilo:</P>
+        <P>Body {background-color: #FF0000;} Aplicará el color rojo al fondo de la pagina.</P>
+        <P>Se pueden definir propiedades múltiples, separándolas por punto y coma, por ejemplo:
+            H2{text-align:justify;color:blue;} Aplicará alineación justificada y color azul a los textos de encabezado
+            de tipo h2.</P>
+
+        </P>
+
+        <H1>AGRUPACION DE ELEMENTOS CON EL ATRIBUTO CLASS</H1>
+        <P>Se pueden definir estilos para un mismo tipo de etiqueta HTML, creando clases mediante el atributo class y
+            luego indicando en CSS las propiedades de cada clase particular.</P>
+        <P>Por ejemplo en una pagina hay dos listas de enlaces, una de productos de ropa y otra de complementos:</P>
+
+        <img src="IMAGENES/IMAGEN 1.png" alt="">
+
+        <p>Se desea que los enlaces de la lista de ropa aparezcan en verde y los de complementos en rojo. El resto de
+            enlaces de la pagina deberán aparecer en azul. Se utiliza el atributo class para definir dos clases: ropa y
+            complementos, como una propiedad dentro de la etiqueta <a> que define los enlaces:
+        </p>
+        <img src="IMAGENES/IMAGEN 2.png" alt="">
+
+        <p>Para asignar las propiedades a cada clase, se utiliza la sintaxis css</p>
+        <li>a{color:blue;}</li>
+        <li>a.ropa{color:green;}</li>
+        <li>a.complementos{color:red;}</li>
+
+        <h2>IDENTIFICACION DE UN ELEMENTO USANDO EL ATRIBUTO ID</h2>
+
+        <p>Dentro de cada etiqueta HTML se puede incluir un identificador mediante el atributo id. No pueden existir dos
+            elementos dentro del mismo documento con el mismo id.
+            Este id puede servir para aplicar un estilo especial solamente a un elemento. En CSS se indica que un estilo
+            se asigna a un identificador concreto mediante el carácter almohadilla #.
+            Por ejemplo, se tiene la siguiente disposición de líneas de texto de tipo h1 y h2, con los nombre de los
+            capítulos de un libro, cada línea lleva un id diferente.</p>
+        <img src="IMAGENES/IMAGEN 3.png" alt="">
+
+        <p>Si se quisiera aplicar un formato especial, por ejemplo color rojo solamente al capitulo 3-1, se escribiría
+            la sintaxis CSS:</p>
+        <p> #c1-2 {color:red;}</p>
+
+        <h2>COMO SE APLICA CSS A UN DOCUMENTO HTML</h2>
+        <p>Se puede hacer de tres formas diferentes, pero la mas recomendada es la tercera.</p>
+
+        <sub>
+            <h3>1. Mediante el atributo style</h3>
+        </sub>
+        <p>El atributo style es de CSS pero se inserta dentro de las etiquetas HTML directamente. Por ejemplo, para
+            aplicar el color rojo al fondo de la pagina, en el documento HTML se escribiría dentro de la etiqueta body:
+        </p>
+        <img src="IMAGENES/IMAGEN 4.png" alt="">
+
+
+        <sub>
+            <h3>2. Mediante la etiqueta style: </h3>
+        </sub>
+
+        <p>También de esta forma se insertaría código CSS dentro del archivo HTML, en esta ocasión mediante una etiqueta
+            HTML llamada style, por ejemplo, para conseguir el mismo efecto que en el caso anterior, se escribiría:</p>
+
+        <img src="IMAGENES/IMAGEN 5.png" alt="">
+
+        <sub>
+            <h3>3. Mediante un archivo CSS externo.</h3>
+        </sub>
+        <p>Esta es la forma mas recomendada de definir los estilos, ya que pueden ahorrar mucho trabajo, si se desea
+            cambiar, por ejemplo, el color de fondo de un sitio web compuesto por 100 paginas, se puede llevar a cabo en
+            unos segundos modificando parte del código de la hoja de estilo principal. Con una hoja de estilos externa
+            se evita el tener que cambiar de forma manual los 100 documentos HTML. <br>
+            Una hoja de estilos CSS no es mas que un archivo de texto, igual que un archivo HTML, solo que con la
+            extensión .css por tanto la forma de crearlas y editarlas es exactamente igual que con los archivos HTML y
+            se puede usar también el bloc de notas. <br>
+            En ese archivo se escriben todas las reglas de estilos en lenguajes CSS como se ha descrito anteriormente,
+            guardando el archivo con el nombre por ejemplo estilos.css. <br>
+            Después en cada archivo HTML al que se le quiera aplicar la hoja de estilos, se inserta una línea de código
+            dentro del encabezado, indicando la ruta del archivo CSS, de la siguiente forma:
+        </p>
+        <img src="IMAGENES/IMAGEN 6.png" alt="">
+
+    </section>
+    <br><br>
+    <hr>
+    <a name="seccion3"></a>
+    <section>
+        <h3>MOCKUP</h3>
+        <img src="IMAGENES/mockup.png" alt="">
+
+    </section>
+    <hr>
+    <a name="seccion4"></a>
+    <section>
+
+        <h3>ACERCA DE </h3>
+        <P>Nombre: Carlos Armando Sanchez Gebauer</P>
+        <P>Programa: Tecnologia en Producción de Audio</P>
+        <p> Mis datos de contacto son: <br>
+            skype: live:gebauer_carlos <br>
+            telefono: 3023792198 <br>
+            email: gebauer_carlos@outlook.com <br>
+        </p>
+    </section>
+<hr>
+    <footer>
+        <p>Esta pagina fue desarrollada por Carlos Armando Sanchez Gebauer</p>
+        <P>Ultima actualización: Martes 7 de marzo</P>
+    </footer>
+
+
+
+
 </body>
 
 </html>
